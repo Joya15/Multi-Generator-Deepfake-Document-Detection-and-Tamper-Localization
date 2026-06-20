@@ -1,0 +1,47 @@
+# Python environments, caches, and build products
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# Local settings and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Datasets and machine-specific generated manifests
+data/*
+!data/README.md
+
+# Downloaded third-party repositories and checkpoints
+external/*
+!external/README.md
+
+# Generated checkpoints, predictions, reports, and logs
+outputs/*
+!outputs/README.md
+configs/study_*.yaml
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.onnx
+*.npz
+*.log
+
+# Local project handover and scratch files
+PROJECT_HANDOVER_FOR_NEW_CHAT.md
+tmp/

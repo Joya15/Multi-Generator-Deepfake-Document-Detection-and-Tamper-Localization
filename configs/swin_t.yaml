@@ -1,0 +1,34 @@
+project:
+  root: .
+  seed: 42
+data:
+  dataset_root: ..
+  manifest_dir: data/manifests
+model:
+  architecture: swin_t
+  pretrained: false
+  dropout: 0.10
+training:
+  image_size: 384
+  batch_size: 1
+  num_workers: 0
+  epochs: 2
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  gradient_accumulation_steps: 8
+  mixed_precision: true
+  mask_pos_weight: 25.0
+  seg_loss_weight: 1.0
+  cls_loss_weight: 0.35
+  max_grad_norm: 1.0
+  prefer_cuda: true
+inference:
+  threshold: 0.5
+  overlay_alpha: 0.45
+evaluation:
+  pixel_auc_max_samples: 2500000
+outputs:
+  root: outputs
+  checkpoints: outputs/checkpoints/swin_t
+  predictions: outputs/predictions
+  reports: outputs/reports
